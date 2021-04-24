@@ -1,0 +1,8 @@
+numpy
+scikit-image
+tensorflow==1.8.0
+keras==2.2.0
+opencv-python
+erogaki-wrapper-shared-python>=0.7.1
+redis
+Pillow
