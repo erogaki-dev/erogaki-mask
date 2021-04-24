@@ -1,10 +1,5 @@
 FROM continuumio/miniconda3 AS deploy
 
-## Copy models.
-WORKDIR /models
-
-COPY ["./models/hent-AI model 268", "./hent-AI model 268"]
-
 ## Setup erogaki-mask.
 WORKDIR /app
 
