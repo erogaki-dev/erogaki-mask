@@ -29,7 +29,7 @@ def main():
 
             print("processed image, saving to redis")
             r.set("masked-images:%s" % uuid.decode(), ImageProcessor.image_to_bytes(prepared_img))
-            r.rpush("decensor-requests:%s" % "mosaic" if is_mosaic else "bar", "%s" % uuid.decode())
+            r.rpush("decensor-requests:%s" % ("mosaic" if is_mosaic else "bar"), "%s" % uuid.decode())
         except NoCensoredRegionsFoundError as e:
             print(e.description)
             r.set("errors:%s" % uuid.decode(), e.json)
