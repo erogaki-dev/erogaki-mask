@@ -13,7 +13,7 @@ COPY ./src/requirements.txt ./
 RUN conda run --no-capture-output --name erogaki-mask pip install -r requirements.txt
 
 # Install libgl.
-RUN apt-get install -y libgl1-mesa-glx
+RUN apt-get update && apt-get install -y libgl1-mesa-glx
 
 # Copy the source code.
 COPY ./src ./
